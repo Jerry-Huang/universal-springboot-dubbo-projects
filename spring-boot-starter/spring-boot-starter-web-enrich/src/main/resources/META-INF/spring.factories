@@ -1,0 +1,8 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.universal.spring.boot.starter.web.interceptor.SessionInterceptorAutoConfiguration,\
+  com.universal.spring.boot.starter.web.interceptor.ValidationInterceptorAutoConfiguration,\
+  com.universal.spring.boot.starter.web.interceptor.AuthorizationInterceptorAutoConfiguration,\
+  com.universal.spring.boot.starter.web.filter.ValidateRequestFilterAutoConfiguration,\
+  com.universal.spring.boot.starter.web.filter.LogRequestFilterAutoConfiguration,\
+  com.universal.spring.boot.starter.web.resolver.RequestParameterResolverAutoConfiguration

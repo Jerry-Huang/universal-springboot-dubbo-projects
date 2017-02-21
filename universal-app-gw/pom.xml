@@ -1,0 +1,48 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.universal.gw</groupId>
+	<artifactId>universal-app-gw</artifactId>
+
+	<parent>
+		<groupId>com.universal</groupId>
+		<artifactId>universal-application</artifactId>
+		<version>1.0</version>
+		<relativePath>../universal-parent/application-pom.xml</relativePath>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.universal.spring.boot</groupId>
+			<artifactId>spring-boot-starter-dubbo</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.universal.spring.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.universal.spring.boot</groupId>
+			<artifactId>spring-boot-starter-cache-redis</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.universal.spring.boot</groupId>
+			<artifactId>spring-boot-starter-web-enrich</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.universal.api</groupId>
+			<artifactId>universal-user-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>

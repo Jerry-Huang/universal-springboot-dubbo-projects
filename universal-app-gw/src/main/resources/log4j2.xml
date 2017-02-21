@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Configuration status="WARN">
+
+	<Properties>
+		<Property name="log.file.name">/workspace/logs/app-gw</Property>
+	</Properties>
+
+	<Appenders>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout charset="UTF-8" pattern="[%d{yyyy-MM-dd HH:mm:ss,SSS} %5p] [%t] [%c{2}] - %m%n" />
+		</Console>
+		<RollingFile name="FILE" fileName="${log.file.name}.log" filePattern="${log.file.name}.%d{yyyy-MM-dd}.log">
+			<PatternLayout charset="UTF-8" pattern="[%d{yyyy-MM-dd HH:mm:ss,SSS} %5p] [%t] [%c{2}] - %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<AsyncLogger name="com.universal" level="DEBUG" />
+		<AsyncRoot level="WARN">
+			<AppenderRef ref="FILE" />
+			<AppenderRef ref="CONSOLE" />
+		</AsyncRoot>
+	</Loggers>
+</Configuration>  
