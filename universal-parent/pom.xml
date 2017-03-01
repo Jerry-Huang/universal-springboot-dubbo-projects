@@ -48,28 +48,28 @@
 			</activation>
 			<properties>
 				<environment>dev</environment>
-				<nexus.host>dev-nexus.nmtx.me</nexus.host>
+				<nexus.host>dev-nexus.universal.me</nexus.host>
 			</properties>
 		</profile>
 		<profile>
 			<id>tst</id>
 			<properties>
 				<environment>tst</environment>
-				<nexus.host>tst-nexus.nmtx.me</nexus.host>
+				<nexus.host>tst-nexus.universal.me</nexus.host>
 			</properties>
 		</profile>
 		<profile>
 			<id>uat</id>
 			<properties>
 				<environment>uat</environment>
-				<nexus.host>uat-nexus.nmtx.me</nexus.host>
+				<nexus.host>uat-nexus.universal.me</nexus.host>
 			</properties>
 		</profile>
 		<profile>
 			<id>prd</id>
 			<properties>
 				<environment>prd</environment>
-				<nexus.host>uat-nexus.nmtx.me</nexus.host>
+				<nexus.host>uat-nexus.universal.me</nexus.host>
 			</properties>
 		</profile>
 	</profiles>
