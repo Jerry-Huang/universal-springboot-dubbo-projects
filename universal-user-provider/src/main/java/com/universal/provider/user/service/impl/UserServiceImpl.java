@@ -1,14 +1,13 @@
 package com.universal.provider.user.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
-
-import com.alibaba.dubbo.config.annotation.Service;
 import com.universal.api.user.bean.UserBean;
 import com.universal.api.user.service.UserService;
 import com.universal.provider.user.mapper.UserMapper;
+import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 
-@Service
+@DubboService
 public class UserServiceImpl implements UserService {
 
     @Autowired
