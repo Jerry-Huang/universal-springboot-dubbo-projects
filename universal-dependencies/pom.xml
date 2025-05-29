@@ -65,6 +65,21 @@
                 <artifactId>universal-spring-boot-metadata</artifactId>
                 <version>${universal-spring-boot-starter.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.universal.spring.boot</groupId>
+                <artifactId>universal-spring-boot-starter-cache-redis</artifactId>
+                <version>${universal-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.universal.spring.boot</groupId>
+                <artifactId>universal-spring-boot-starter-data-redis</artifactId>
+                <version>${universal-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.universal.spring.boot</groupId>
+                <artifactId>universal-spring-boot-starter-web-enhancement</artifactId>
+                <version>${universal-spring-boot-starter.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

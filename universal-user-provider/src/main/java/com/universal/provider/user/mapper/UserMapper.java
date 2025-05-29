@@ -6,7 +6,7 @@ import com.universal.api.user.bean.UserBean;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-@DS("onl")
+@DS("master")
 public interface UserMapper {
 
     UserBean find(final UserBean userBean);

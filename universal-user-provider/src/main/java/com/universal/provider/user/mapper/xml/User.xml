@@ -4,22 +4,7 @@
 
 	<select id="find" resultType="com.universal.api.user.bean.UserBean">
 		SELECT
-		`ID`,
-		`PARENT_ID`,
-		`USER_NAME`,
-		`PASSWORD`,
-		`LINK_NAME`,
-		`TYPE`,
-		`STATUS`,
-		`FACE`,
-		`EMAIL`,
-		`SEX`,
-		`PHONE`,
-		`ADDRESS`,
-		`DISTRICT_CODE`,
-		`CRM_CODE`,
-		`CREATE_TIME`,
-		`UPDATE_TIME`
+		*
 		FROM
 		T_USER
 		<where>

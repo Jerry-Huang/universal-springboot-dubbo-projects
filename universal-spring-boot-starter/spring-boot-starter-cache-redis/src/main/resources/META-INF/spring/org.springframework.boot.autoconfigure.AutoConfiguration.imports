@@ -1,1 +1,1 @@
-redis.cache.starter.boot.spring.com.universal.sprint.boot.RedisCacheAutoConfiguration
+com.universal.spring.boot.starter.cache.RedisCacheAutoConfiguration
