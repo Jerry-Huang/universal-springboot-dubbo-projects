@@ -13,10 +13,10 @@ public class SimpleApiResponse extends GenericApiResponse<Map<String, Object>> {
 
     public SimpleApiResponse() {
 
-        this.setPayload(new HashMap<String, Object>());
+        this.setPayload(new HashMap<>());
     }
 
-    public void addObject(final String name, final Object value) {
+    public void put(final String name, final Object value) {
 
         this.getPayload().put(name, value);
     }

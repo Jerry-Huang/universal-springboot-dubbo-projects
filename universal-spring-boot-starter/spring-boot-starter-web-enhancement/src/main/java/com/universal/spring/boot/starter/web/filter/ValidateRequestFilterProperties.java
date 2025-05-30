@@ -10,7 +10,7 @@ public class ValidateRequestFilterProperties {
 
     private boolean enable = false;
     private String implementedClass;
-    private String urlPatterns = Strings.EMPTY;
+    private String urlPatterns = "/*";
 
     public boolean isEnable() {
         return enable;

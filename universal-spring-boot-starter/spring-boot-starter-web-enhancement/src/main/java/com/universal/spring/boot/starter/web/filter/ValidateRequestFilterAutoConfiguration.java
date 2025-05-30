@@ -14,7 +14,6 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
 
@@ -22,7 +21,7 @@ import java.util.List;
 @ConditionalOnWebApplication
 @EnableConfigurationProperties(ValidateRequestFilterProperties.class)
 @ConditionalOnProperty(prefix = ValidateRequestFilterProperties.PREFIX, name = "enable", havingValue = "true", matchIfMissing = true)
-public class ValidateRequestFilterAutoConfiguration implements WebMvcConfigurer {
+public class ValidateRequestFilterAutoConfiguration {
 
     private final static Logger logger = LoggerFactory.getLogger(ValidateRequestFilterAutoConfiguration.class);
 
@@ -35,7 +34,7 @@ public class ValidateRequestFilterAutoConfiguration implements WebMvcConfigurer 
     private ValidateRequestFilterProperties properties;
 
     @Bean
-    public FilterRegistrationBean validateRequestFilter() throws Exception {
+    public FilterRegistrationBean<AbstractValidateRequestFilter> validateRequestFilter() {
 
         AbstractValidateRequestFilter validateRequestFilter;
         if (StringUtils.isBlank(properties.getImplementedClass())) {
@@ -47,7 +46,7 @@ public class ValidateRequestFilterAutoConfiguration implements WebMvcConfigurer 
             applicationContext.getAutowireCapableBeanFactory().autowireBean(validateRequestFilter);
         }
 
-        final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+        final FilterRegistrationBean<AbstractValidateRequestFilter> registrationBean = new FilterRegistrationBean<>();
         registrationBean.setFilter(validateRequestFilter);
 
         List<String> urlPatterns = UrlPatternUtils.parse(properties.getUrlPatterns());

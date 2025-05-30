@@ -10,7 +10,7 @@ public class LogRequestFilterProperties {
 
 
     private boolean enable = true;
-    private String urlPatterns = Strings.EMPTY;
+    private String urlPatterns = "/*";
 
     public boolean isEnable() {
         return enable;

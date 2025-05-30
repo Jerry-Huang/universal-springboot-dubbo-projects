@@ -16,7 +16,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -33,8 +32,6 @@ public abstract class AbstractValidateRequestFilter extends OncePerRequestFilter
     private final static Logger logger = LoggerFactory.getLogger(AbstractValidateRequestFilter.class);
 
     private static final Set<Environment> IGNORE_ENVIRONMENTS = Set.of(Environment.WORKSTATION, Environment.DEV);
-
-    private Map<String, Pair<String, String>> bundles = null;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {

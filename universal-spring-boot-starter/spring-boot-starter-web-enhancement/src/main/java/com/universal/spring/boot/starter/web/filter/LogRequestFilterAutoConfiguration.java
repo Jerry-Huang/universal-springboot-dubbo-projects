@@ -2,7 +2,6 @@ package com.universal.spring.boot.starter.web.filter;
 
 import com.universal.spring.boot.starter.web.util.UrlPatternUtils;
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,17 +12,14 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 @Configuration
 @ConditionalOnWebApplication
 @EnableConfigurationProperties(LogRequestFilterProperties.class)
 @ConditionalOnProperty(prefix = LogRequestFilterProperties.PREFIX, name = "enable", havingValue = "true", matchIfMissing = true)
-public class LogRequestFilterAutoConfiguration implements WebMvcConfigurer {
+public class LogRequestFilterAutoConfiguration {
 
     private final static Logger logger = LoggerFactory.getLogger(LogRequestFilterAutoConfiguration.class);
 
@@ -36,7 +32,6 @@ public class LogRequestFilterAutoConfiguration implements WebMvcConfigurer {
     public FilterRegistrationBean<LogRequestFilter> logRequestFilter() {
 
         final FilterRegistrationBean<LogRequestFilter> registrationBean = new FilterRegistrationBean<>();
-
         registrationBean.setFilter(new LogRequestFilter());
 
         List<String> urlPatterns = UrlPatternUtils.parse(properties.getUrlPatterns());

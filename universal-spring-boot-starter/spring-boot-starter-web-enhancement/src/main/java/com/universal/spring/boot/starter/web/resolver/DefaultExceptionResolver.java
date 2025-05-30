@@ -21,7 +21,7 @@ public class DefaultExceptionResolver {
 
     private final static Logger logger = LoggerFactory.getLogger(DefaultExceptionResolver.class);
 
-    @ExceptionHandler({Exception.class})
+    @ExceptionHandler({Throwable.class})
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ApiResponse resolveException(NativeWebRequest httpRequest, Exception exception) {
