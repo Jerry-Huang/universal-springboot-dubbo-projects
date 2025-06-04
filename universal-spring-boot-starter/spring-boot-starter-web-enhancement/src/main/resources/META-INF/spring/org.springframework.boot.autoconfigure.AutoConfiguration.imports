@@ -1,0 +1,5 @@
+com.universal.spring.boot.starter.web.filter.LogRequestFilterAutoConfiguration
+com.universal.spring.boot.starter.web.filter.ValidateRequestFilterAutoConfiguration
+com.universal.spring.boot.starter.web.resolver.RequestParameterResolverAutoConfiguration
+com.universal.spring.boot.starter.web.interceptor.ValidationInterceptorAutoConfiguration
+com.universal.spring.boot.starter.web.interceptor.PermissionInterceptorAutoConfiguration

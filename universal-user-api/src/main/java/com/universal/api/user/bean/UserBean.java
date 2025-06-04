@@ -3,14 +3,14 @@ package com.universal.api.user.bean;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.universal.commons.entity.AbstractEntity;
+
+import java.io.Serializable;
 
 @JsonInclude(Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UserBean extends AbstractEntity {
+public class UserBean implements Serializable {
 
-    private static final long serialVersionUID = -7662584777302408661L;
-
+    private int id;
     private int parentId;
     private String userName;
     private String password;
@@ -24,6 +24,14 @@ public class UserBean extends AbstractEntity {
     private String sex;
     private String crmCode;
     private String status;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getParentId() {
         return parentId;

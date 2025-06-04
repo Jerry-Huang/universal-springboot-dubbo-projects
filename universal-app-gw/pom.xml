@@ -1,0 +1,40 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.universal.gw</groupId>
+    <artifactId>universal-app-gw</artifactId>
+
+    <parent>
+        <groupId>com.universal</groupId>
+        <artifactId>universal-parent</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <build>
+        <filters>
+            <filter>src/main/filters/${environment}.properties</filter>
+        </filters>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.universal.api</groupId>
+            <artifactId>universal-user-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.universal.spring.boot</groupId>
+            <artifactId>universal-spring-boot-starter-cache-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.universal.spring.boot</groupId>
+            <artifactId>universal-spring-boot-starter-web-enhancement</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
