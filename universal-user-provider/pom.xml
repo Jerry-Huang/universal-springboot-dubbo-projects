@@ -11,6 +11,12 @@
         <version>${revision}</version>
     </parent>
 
+    <build>
+        <filters>
+            <filter>src/main/filters/${environment}.properties</filter>
+        </filters>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>com.universal.api</groupId>
@@ -20,27 +26,22 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>2.3.232</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.5.19</version>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
-            <version>4.3.1</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>3.0.4</version>
         </dependency>
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>3.3.4</version>
         </dependency>
     </dependencies>
 </project>

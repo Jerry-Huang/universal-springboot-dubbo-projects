@@ -12,8 +12,15 @@
 
         <spring-boot.version>3.4.5</spring-boot.version>
         <universal-spring-boot-starter.version>1.0-SNAPSHOT</universal-spring-boot-starter.version>
+        <dubbo.version>3.3.4</dubbo.version>
+        <h2database.version>2.3.232</h2database.version>
+        <mybatis.version>3.5.19</mybatis.version>
+        <mybatis-spring-boot-starter.version>3.0.4</mybatis-spring-boot-starter.version>
+        <dynamic-datasource-spring-boot3-starter.version>4.3.1</dynamic-datasource-spring-boot3-starter.version>
 
-        <maven.flatten-maven-plugin>1.7.0</maven.flatten-maven-plugin>
+        <flatten-maven-plugin.vsersion>1.7.0</flatten-maven-plugin.vsersion>
+        <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
+        <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
     </properties>
 
     <build>
@@ -26,7 +33,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
-                <version>${maven.flatten-maven-plugin}</version>
+                <version>${flatten-maven-plugin.vsersion}</version>
                 <configuration>
                     <flattenMode>oss</flattenMode>
                     <updatePomFile>true</updatePomFile>
@@ -49,6 +56,20 @@
                 </executions>
             </plugin>
         </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>${maven-dependency-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <dependencyManagement>
@@ -79,6 +100,31 @@
                 <groupId>com.universal.spring.boot</groupId>
                 <artifactId>universal-spring-boot-starter-web-enhancement</artifactId>
                 <version>${universal-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2database.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
+                <version>${dynamic-datasource-spring-boot3-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

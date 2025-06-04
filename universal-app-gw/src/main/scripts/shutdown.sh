@@ -3,7 +3,7 @@
 PWD=$(cd "$(dirname "$0")"; pwd)
 
 PORT=${mvn.server.port}
-MAINCLASS=com.universal.gateway.Application
+MAINCLASS=com.universal.gw.Application
 PIDS=`netstat -tlnp | grep "$PORT" | awk '{print $7}' | awk -F '/' '{print $1}'`
 if [ ! $PIDS ]; then
   PIDS=`ps -ef | grep "$MAINCLASS" | grep -v grep | awk '{print $2}'`

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PWD=$(cd "$(dirname "$0")"; pwd)
-LOG="${mvn.log.file.path.name}.out"
+LOG="${mvn.log.file.full-path}.out"
 JAVA='/opt/program/jdk/jdk1.8.0_102/bin/java'
 
 PORT=${mvn.dubbo.protocol.port}
